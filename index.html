@@ -4,38 +4,209 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/public/style.css">
     <title>Zimakhesht Co.</title>
 </head>
 <body>
-    <nav>
+    <nav id="menu">
+        <a href="#menu" id="menu-open">
+            <span class="material-icons">
+                menu
+            </span>
+        </a>
+        <a href="#" id="menu-close">×</a>
         <a href="/">home</a>
-        <a href="/blog">blog</a>
-        <a href="#main-1">home</a>
-        <a href="#main-2">home</a>
-        <a href="#main-3">home</a>
+        <a href="#services">services</a>
+        <a href="#projects">projects</a>
+        <a href="#team">team</a>
+        <a href="#news">news</a>
     </nav>
     <header>
         <!-- tell, addr -->
+        <h1><a name="header">Zimakhesht Co.</a></h1>
+        <a href="tel:+981122334567">+98-11-2233-4567</a>
     </header>
     <main>
-        <section>
+        <header class="slider" data-flickity='{ "cellAlign": "left", "wrapAround": true, "autoPlay": true, "cellSelector": ".cell", "pageDots": false }'>
             <!-- slider -->
-        </section>
-        <section>
+            <div class="static">
+                <h1>Zimakhesht Co.</h1>
+                <h2>We build</h2>
+            </div>
+            <div class="static" style="left: 0; top: 0; width: 100%; height: 100%; z-index: 1;"></div>
+
+            <div class="cell c1"></div>
+            <div class="cell c2"></div>
+            <div class="cell c3"></div>
+            <!-- <div class="cell c4"></div> -->
+        </header>
+        <section class="s1">
             <!-- services -->
+            <h1><a name="services">Our services</a></h1>
+            <ul>
+                <li>
+                    <img src="/public/images/1.jpg" alt="" srcset="">
+                    <div>
+                        <h2>service 1</h2>
+                        <p>we provide service 1</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/public/images/2.jpg" alt="" srcset="">
+                    <div>
+                        <h2>service 2</h2>
+                        <p>we provide service 2</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/public/images/3.jpg" alt="" srcset="">
+                    <div>
+                        <h2>service 3</h2>
+                        <p>we provide service 3</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/public/images/4.jpg" alt="" srcset="">
+                    <div>
+                        <h2>service 4</h2>
+                        <p>we provide service 4</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/public/images/5.jpg" alt="" srcset="">
+                    <div>
+                        <h2>service 5</h2>
+                        <p>we provide service 5</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/public/images/6.jpg" alt="" srcset="">
+                    <div>
+                        <h2>service 6</h2>
+                        <p>we provide service 6</p>
+                    </div>
+                </li>
+            </ul>
         </section>
-        <section>
+        <section class="s2">
             <!-- projects -->
+            <h1><a name="projects">Our projects</a></h1>
+            <ul>
+                <li>
+                    <h2>project 1</h2>
+                    <p>we did project 1</p>
+                </li>
+                <li>
+                    <h2>project 2</h2>
+                    <p>we did project 2</p>
+                </li>
+                <li>
+                    <h2>project 3</h2>
+                    <p>we did project 3</p>
+                </li>
+                <li>
+                    <h2>project 4</h2>
+                    <p>we did project 4</p>
+                </li>
+            </ul>
         </section>
-        <section>
+        <section class="s3">
             <!-- team -->
+            <h1><a name="team">Our team</a></h1>
+            <h2>With a lot of experience</h2>
+            <ul>
+                <li>
+                    <h2>Person 1</h2>
+                    <p>our agent for a certain job</p>
+                </li>
+                <li>
+                    <h2>Person 2</h2>
+                    <p>our agent for a certain job</p>
+                </li>
+                <li>
+                    <h2>Person 3</h2>
+                    <p>our agent for a certain job</p>
+                </li>
+                <li>
+                    <h2>Person 4</h2>
+                    <p>our agent for a certain job</p>
+                </li>
+                <li>
+                    <h2>Person 5</h2>
+                    <p>our agent for a certain job</p>
+                </li>
+            </ul>
         </section>
-        <section>
+        <section class="s4">
             <!-- news -->
+            <h1><a name="news">Latest news</a></h1>
+            <ul>
+
+                <a href="/news/news-1/">
+                    <li>
+                        <img src="/news/news-1/1.jpg" alt="news 1 image">
+                        <h2>news 1</h2>
+                        <p>this thing has happend</p>
+                    </li>
+                </a>
+                <a href="/news/news-2/">
+                    <li>
+                        <img src="/news/news-2/1.jpg" alt="news 2 image">
+                        <h2>news 2</h2>
+                        <p>this thing has happend</p>
+                    </li>
+                </a>
+                <a href="/news/news-3/">
+                    <li>
+                        <img src="/news/news-3/1.jpg" alt="news 3 image">
+                        <h2>news 3</h2>
+                        <p>this thing has happend</p>
+                    </li>
+                </a>
+                <a href="/news/news-4/">
+                    <li>
+                        <img src="/news/news-4/1.jpg" alt="news 4 image">
+                        <h2>news 4</h2>
+                        <p>this thing has happend</p>
+                    </li>
+                </a>
+                <a href="/news/news-5/">
+                    <li>
+                        <img src="/news/news-5/1.jpg" alt="news 5 image">
+                        <h2>news 5</h2>
+                        <p>this thing has happend</p>
+                    </li>
+                </a>
+            </ul>
         </section>
     </main>
-    <footer></footer>
-    <!-- <script></script> -->
+    <footer>
+        <section>
+            <!-- about -->
+            <h1>Zimakhesht</h1>
+            <p>we provide construction services</p>
+        </section>
+        <section>
+            <!-- nav -->
+            <h1>Links</h1>
+            <a href="/">home</a>
+            <a href="#services">services</a>
+            <a href="#projects">projects</a>
+            <a href="#team">team</a>
+            <a href="#news">news</a>
+        </section>
+        <section>
+            <!-- contact -->
+            <h1>Contact us</h1>
+            <a href="tel:+981122334567">addr</a>
+            <a href="tel:+981122334567">tel</a>
+            <a href="tel:+981122334567">email</a>
+            <a href="tel:+981122334567">telegram</a>
+            <a href="tel:+981122334567">instagram</a>
+        </section>
+    </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,321 @@
+/*  #e1c2a1 orange
+#efca1f yellow
+#e2e4e3 cold
+#d1d1d0 gray
+#b0a398 brown */
+
+
+* { box-sizing: border-box; }
+a, a:visited { text-decoration: none; color: inherit; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0000; }
+::-webkit-scrollbar-thumb { background: #efca1f; }
+
+body { margin: 0; padding: 0; }
+body > * { 
+    margin: 0;
+}
+img { max-width: 80vw; }
+
+nav {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 8vh;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #e2e4e3;
+    z-index: 3;
+}
+nav:not(:target) {
+    border-radius: 100%;
+    margin: 2vh;
+    padding: 0.5rem;
+}
+nav:target {
+    height: 100%;
+    width: 100%;
+}
+nav > #menu-close { display: none; }
+nav:target > #menu-close  { display: initial; font-size: xx-large; }
+nav > #menu-open { display: initial; }
+nav > #menu-open > span { font-size: x-large; }
+nav:target > #menu-open { display: none; }
+nav a {
+    display: none;
+    color: inherit !important;
+    margin: 1rem;
+}
+nav:target a { display: initial; }
+body > header {
+    height: 5vh;
+    /* margin-top: 8vh; */
+    background-color: #efca1f;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+body > header h1 { font-size: small; margin: 0; }
+body > header a { margin: 1rem; }
+
+/* main */
+
+/* slider */
+.slider {
+    height: 60vh;
+}
+.slider .static {
+    pointer-events: none;
+    position: absolute;
+    background: hsla(0, 0%, 0%, 0.3);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 20vh;
+    color: #efca1f;
+}
+.slider .cell {
+    width: 100%;
+    height: 60vh;
+    margin-right: 10px;
+}
+.slider .cell.c1 { background-image: url("/public/images/1.jpg"); }
+.slider .cell.c2 { background-image: url("/public/images/2.jpg"); }
+.slider .cell.c3 { background-image: url("/public/images/3.jpg"); }
+/* ADD CELL BG HERE */
+.flickity-button {
+    background: #333;
+}
+.flickity-button:hover {
+    background: #efca1f;
+}
+.flickity-prev-next-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.flickity-button-icon {
+    fill: white;
+}
+
+/* sections */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem;
+}
+main section {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+main section > h1 {
+    font-size: xx-large;
+    width: 50vw;
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border-radius: 0.1rem;
+}
+main section > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.s1 {
+    background-color: #efca1f;
+    color: black;
+}
+.s1 li {
+    transition: all 200ms;
+    margin: 1rem;
+    width: 80vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.s1 li img, .s1 li div {
+    width: 45%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.s1 li div { border: solid 1px black; }
+.s1 li:hover div { border: solid 3px black; }
+.s1 li:hover {
+    width: 83vw;
+    height: 26vh;
+}
+
+.s2 {
+    background-color: #e2e4e3;
+    color: black;
+}
+.s2 ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.s2 li {
+    transition: all 200ms;
+    border: solid 1px black;
+    margin: 1rem;
+    width: 35vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.s2 li:hover {
+    width: 37vw;
+    height: 26vh;
+    border: solid 3px black;
+}
+.s3 ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 95vw;
+    transition: all 200ms;
+    border: solid 1px #b0a398;
+}
+.s3 ul:hover {
+    border-radius: 0.2rem;
+    border: solid 3px #b0a398;
+}
+.s3 {
+    background-color: #d1d1d0;
+    padding-bottom: 2rem;
+}
+.s3 h1, .s3 h2, .s3 p { color: black; }
+
+.s4 ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.s4 li {
+    width: 65vw;
+    height: 50vh;
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.s4 img {
+    width: 100%;
+    height: 30vh;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    color: #d1d1d0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+footer section {
+    width: 80vw;
+    height: 30vh;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+footer section *:not(h1) {
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+footer section h1::before {
+    content: "|";
+    color: #efca1f;
+    margin: 1rem;
+    font-size: xx-large;
+}
+
+
+@media (min-width: 992px) {
+    .slider .static {
+        width: initial;
+        height: initial;
+        text-align: initial;
+        padding: 1rem 2rem;
+        left: 15%;
+        top: 20%;
+        font-size: 2rem;
+    }
+    .s1 ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 95vw;
+    }
+    .s1 li {
+        width: 35vw;
+    }
+    .s1 li:hover {
+        width: 37vw;
+    }
+    .s4 li {
+        width: 20vw;
+        height: 35vh;
+    }
+    .s4 img {
+        width: 100%;
+        height: 15vh;
+    }
+    footer {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    footer section {
+        width: 30vw;
+        height: 25vh;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    * {
+        font-size: 70%;
+    }
+    header h1, header h2, footer * {
+        font-size: 150%;
+    }
+}
