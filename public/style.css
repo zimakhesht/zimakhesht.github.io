@@ -215,6 +215,10 @@ main section > ul {
 .s15 {
     background-color: #b0a398;
     color: white;
+    height: 30vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around
 }
 .s2 {
     background-color: #e2e4e3;
@@ -357,6 +361,10 @@ footer section h1::before {
     }
     .s1 li:hover {
         width: 37vw;
+    }
+    .s15 {
+        flex-direction: column;
+        height: initial;
     }
     .s4 li {
         width: 20vw;
