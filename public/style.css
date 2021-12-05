@@ -120,12 +120,9 @@ body > header a { margin: 1rem; }
     background-size: cover;
 }
 .slider .cell.c1 { background-image: url("/public/images/1.jpg"); }
-.slider .cell.c2 { background-image: url("/public/images/2.jpg"); }
-.slider .cell.c3 { background-image: url("/public/images/3.jpg"); }
+.slider .cell.c2 { background-image: url("/public/images/5.jpg"); }
+.slider .cell.c3 { background-image: url("/public/images/12.jpg"); }
 .slider .cell.c4 { background-image: url("/public/images/4.jpg"); }
-.slider .cell.c5 { background-image: url("/public/images/5.jpg"); }
-.slider .cell.c6 { background-image: url("/public/images/6.jpg"); }
-.slider .cell.c7 { background-image: url("/public/images/7.jpg"); }
 /* .slider .cell.c8 { background-image: url("/public/images/8.jpg"); } */
 /* ADD CELL BG HERE */
 
