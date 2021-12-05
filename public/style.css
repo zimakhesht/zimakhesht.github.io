@@ -3,7 +3,35 @@
 #e2e4e3 cold
 #d1d1d0 gray
 #b0a398 brown */
+@font-face {
+    font-family: 'iransans';
+    src: url("/public/font/iransans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'iransans-medium';
+    src: url("/public/font/iransans_medium.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'mitra';
+    src: url("/public/font/mitra.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'mitra-bold';
+    src: url("/public/font/mitra_bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
 
+:root {
+    font-family: iransans;
+    direction: rtl;
+}
 
 * { box-sizing: border-box; }
 a, a:visited { text-decoration: none; color: inherit; }
@@ -69,7 +97,7 @@ body > header a { margin: 1rem; }
 
 /* slider */
 .slider {
-    height: 60vh;
+    height: 80vh;
 }
 .slider .static {
     pointer-events: none;
@@ -85,13 +113,22 @@ body > header a { margin: 1rem; }
 }
 .slider .cell {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     margin-right: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .slider .cell.c1 { background-image: url("/public/images/1.jpg"); }
 .slider .cell.c2 { background-image: url("/public/images/2.jpg"); }
 .slider .cell.c3 { background-image: url("/public/images/3.jpg"); }
+.slider .cell.c4 { background-image: url("/public/images/4.jpg"); }
+.slider .cell.c5 { background-image: url("/public/images/5.jpg"); }
+.slider .cell.c6 { background-image: url("/public/images/6.jpg"); }
+.slider .cell.c7 { background-image: url("/public/images/7.jpg"); }
+/* .slider .cell.c8 { background-image: url("/public/images/8.jpg"); } */
 /* ADD CELL BG HERE */
+
 .flickity-button {
     background: #333;
 }
@@ -143,7 +180,10 @@ main section > ul {
     justify-content: center;
     align-items: center;
 }
-
+.s0 h1 {
+    height: 20%;
+    margin-bottom: 0.5rem;
+}
 .s1 {
     background-color: #efca1f;
     color: black;
@@ -168,13 +208,17 @@ main section > ul {
     justify-content: center;
     align-items: center;
 }
+
 .s1 li div { border: solid 1px black; }
 .s1 li:hover div { border: solid 3px black; }
 .s1 li:hover {
     width: 83vw;
     height: 26vh;
 }
-
+.s15 {
+    background-color: #b0a398;
+    color: white;
+}
 .s2 {
     background-color: #e2e4e3;
     color: black;
@@ -187,19 +231,26 @@ main section > ul {
     transition: all 200ms;
     border: solid 1px black;
     margin: 1rem;
-    width: 35vw;
-    height: 25vh;
+    padding: 1.5rem;
+    width: 80vw;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    align-content: center;
 }
 .s2 li:hover {
-    width: 37vw;
-    height: 26vh;
+    width: 81vw;
+    height: 40vh;
     border: solid 3px black;
 }
+.s2 li h2 { font-size: large; }
+.s2 li p { display: none; }
+.s2 li:hover h2 { display: none; }
+.s2 li:hover p { display: block; }
+
 .s3 ul {
     flex-direction: row;
     flex-wrap: wrap;
@@ -216,8 +267,11 @@ main section > ul {
     background-color: #d1d1d0;
     padding-bottom: 2rem;
 }
-.s3 h1, .s3 h2, .s3 p { color: black; }
-
+.s3 h1, .s3 h2, .s3 p {
+    color: black;
+    margin: 1.5rem;
+    font-size: medium;
+}
 .s4 ul {
     flex-direction: row;
     flex-wrap: wrap;
@@ -247,8 +301,10 @@ footer {
 }
 footer section {
     width: 80vw;
-    height: 30vh;
+    min-height: 50vh;
+    height: fit-content;
     margin: 0rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -267,6 +323,18 @@ footer section h1::before {
     font-size: xx-large;
 }
 
+/* news pages */
+.news-section {
+    margin: 5vh 0;
+}
+.news-section img {
+    width: 50vw;
+    height: 25vw;
+}
+.news-section * {
+    margin: 1rem 15vw;
+}
+
 
 @media (min-width: 992px) {
     .slider .static {
@@ -277,6 +345,10 @@ footer section h1::before {
         left: 15%;
         top: 20%;
         font-size: 2rem;
+    }
+    .slider .static.fa {
+        left: initial;
+        right: 15%;
     }
     .s1 ul {
         flex-direction: row;
@@ -314,6 +386,11 @@ footer section h1::before {
 @media (max-width: 400px) {
     * {
         font-size: 70%;
+    }
+    .s0 h1 {
+        font-size: small;
+        height: 20%;
+        margin-bottom: 0.5rem;
     }
     header h1, header h2, footer * {
         font-size: 150%;
